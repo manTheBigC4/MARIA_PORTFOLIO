@@ -770,12 +770,6 @@
           <svg viewBox="0 0 24 24"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M1 14h6"/><path d="M9 8h6"/><path d="M17 16h6"/></svg>
           <span>Customize</span>
         </button>
-
-        <!-- OPEN DIRECT TAB -->
-        <a href="01-gallery-editorial.html" target="_blank" class="shadcn-btn-outline" id="btnOpenDirect" title="Open in new tab">
-          <span>Open Tab</span>
-          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
       </div>
     </header>
 
@@ -1002,7 +996,6 @@
     const iframe             = document.getElementById('demoIframe');
     const frameWrap          = document.getElementById('frameWrap');
     const viewportContainer  = document.getElementById('viewportContainer');
-    const btnOpenDirect      = document.getElementById('btnOpenDirect');
     const loaderOverlay      = document.getElementById('loaderOverlay');
     const btnCustomize       = document.getElementById('btnCustomize');
     const sheetPanel         = document.getElementById('sheetPanel');
@@ -1070,7 +1063,6 @@
         btn.classList.toggle('active', i === index);
       });
 
-      btnOpenDirect.href = proto.id;
       loaderOverlay.style.display = 'flex';
       iframe.src = proto.id;
     }
