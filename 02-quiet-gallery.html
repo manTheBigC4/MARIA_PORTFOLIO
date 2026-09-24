@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M_Karla_Art — Maria Karla L. Gonzales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* DESIGN DIRECTION 02: QUIET GALLERY / MUSEUM / COLLECTION EXPERIENCE */
+    :root {
+      --bg: #f9f8f5;
+      --bg-card: #ffffff;
+      --bg-subtle: #f2efe9;
+      --text-main: #1c1b1a;
+      --text-muted: #6e6b66;
+      --text-light: #9c9891;
+      --border: #e6e2da;
+      --border-delicate: rgba(28, 27, 26, 0.08);
+      --accent-coral: #df4a56;
+      
+      --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+      --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1200px;
+      --transition-calm: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--bg);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-calm);
+    }
+
+    /* HEADER */
+    .gallery-header {
+      padding: 2.5rem 2rem 1.75rem;
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-delicate);
+    }
+
+    .gallery-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--accent-coral);
+    }
+
+    .gallery-nav {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .gallery-nav a {
+      color: var(--text-muted);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .gallery-nav a:hover,
+    .gallery-nav a.active {
+      color: var(--text-main);
+    }
+
+    /* HERO */
+    .quiet-hero {
+      max-width: 900px;
+      margin: 5rem auto 4rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .quiet-welcome {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 300;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .quiet-artist-name {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 3.5rem;
+    }
+
+    .quiet-hero-artwork {
+      background: var(--bg-card);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      display: inline-block;
+      max-width: 520px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .quiet-hero-artwork img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+
+    /* ABOUT ME SECTION */
+    .quiet-about-section {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .bio-portrait-frame {
+      background: #fff;
+      padding: 1.5rem 1.5rem 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .bio-portrait-frame img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+
+    .bio-text-side h2 {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-text-side p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ARTWORKS SECTION */
+    .artworks-container {
+      max-width: var(--container);
+      margin: 6rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-headline {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-main);
+    }
+
+    .quiet-exhibit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    .exhibit-unit {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .exhibit-unit.reversed {
+      grid-template-columns: 1fr 1.2fr;
+    }
+
+    .exhibit-unit.reversed .exhibit-canvas-holder {
+      order: 2;
+    }
+
+    .exhibit-unit.reversed .exhibit-curation {
+      order: 1;
+    }
+
+    .exhibit-canvas-holder {
+      background: var(--bg-card);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      transition: var(--transition-calm);
+    }
+
+    .exhibit-canvas-holder:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+      border-color: #d8d4cc;
+    }
+
+    .exhibit-img-wrap {
+      max-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exhibit-img-wrap img {
+      max-height: 460px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .exhibit-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .exhibit-meta-list {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .exhibit-note {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .exhibit-status {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3b7a57;
+    }
+
+    /* ART VIDEOS */
+    .video-section {
+      max-width: var(--container);
+      margin: 6rem auto;
+      padding: 0 2rem;
+    }
+
+    .video-block {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .video-holder {
+      background: #000;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .video-holder video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CONTACTS */
+    .quiet-footer {
+      border-top: 1px solid var(--border);
+      padding: 5rem 2rem 4rem;
+      max-width: var(--container);
+      margin: 4rem auto 0;
+    }
+
+    .contacts-panel {
+      max-width: 600px;
+      margin-bottom: 4rem;
+    }
+
+    .contacts-panel h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+      font-size: 1rem;
+      color: var(--text-main);
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-coral);
+    }
+
+    .quiet-copyright {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-delicate);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    /* MODAL */
+    .quiet-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(249, 248, 245, 0.97);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .quiet-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content-card {
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .modal-artwork-box {
+      max-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .modal-artwork-box img {
+      max-height: 55vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .modal-info-box {
+      margin-top: 1.5rem;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .modal-title-text {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 0.35rem;
+    }
+
+    .modal-spec-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-note-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .quiet-close {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .quiet-close:hover {
+      color: var(--text-main);
+    }
+
+    @media (max-width: 850px) {
+      .gallery-header {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .quiet-about-section {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .bio-portrait-frame {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .exhibit-unit,
+      .exhibit-unit.reversed {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .exhibit-unit.reversed .exhibit-canvas-holder { order: 1; }
+      .exhibit-unit.reversed .exhibit-curation { order: 2; }
+      .video-block {
+        grid-template-columns: 1fr;
+      }
+      .quiet-copyright {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="gallery-header">
+    <a href="#home" class="gallery-wordmark">M_Karla_Art</a>
+    <nav class="gallery-nav">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT ME</a>
+      <a href="#floral-series">ARTWORKS</a>
+      <a href="#art-videos">ART VIDEOS</a>
+      <a href="#contacts">CONTACTS</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="quiet-hero">
+      <h1 class="quiet-welcome">Hi! WELCOME</h1>
+      <p class="quiet-artist-name">Maria Karla L. Gonzales</p>
+      
+      <div class="quiet-hero-artwork" onclick="openQuietModal('Artwork', 'hero_work.jpg', '', '')">
+        <img src="./assets/hero_work.jpg" 
+             onerror="this.src='https://mkarlaart.my.canva.site/_assets/media/deb516ca1362def54a489575d9a8602c.jpg'" 
+             alt="Artwork" loading="eager">
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="quiet-about-section" id="about">
+      <div class="bio-portrait-frame">
+        <img src="./assets/portrait.png" 
+             onerror="this.src='https://mkarlaart.my.canva.site/_assets/media/e7cc9fd16a021bdd9ba0fe72fe54b940.png'" 
+             alt="Maria Karla L. Gonzales">
+      </div>
+
+      <div class="bio-text-side">
+        <h2>ABOUT ME</h2>
+        <p>
+          Maria Karla L. Gonzales is a resident of Ilaya, Calapan City, and was born in San Teodoro, Oriental Mindoro, on October 10, 1988. She is an alumna of the Bachelor of Fine Arts and Design program, majoring in Painting.
+        </p>
+        <p>
+          Her artistic inspiration is derived from nature, which she expresses through her floral and landscape paintings. Initially, she was inclined toward oil painting as her primary medium due to its technical qualities, but later shifted to acrylic for practical reasons. She is also skilled in digital media. Her use of color and some aspects of her subject matter are inspired by the works of Tom Wesselmann and Frida Kahlo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTWORKS: MY FLORAL SERIES -->
+    <section class="artworks-container" id="floral-series">
+      <h2 class="section-headline">MY FLORAL SERIES</h2>
+
+      <div class="quiet-exhibit-list">
+        <!-- 1 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Crown of Thorns', 'artworks/crown_of_thorns.jpg', 'Dimension: 24inches x 18inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 14th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/crown_of_thorns.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_01.png'" 
+                   alt="Crown of Thorns" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Crown of Thorns</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24inches x 18inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 14th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Red Frangipani', 'artworks/red_frangipani.jpg', 'Dimension: 24inches x 18inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This 5th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/red_frangipani.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_02.png'" 
+                   alt="Red Frangipani" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Red Frangipani</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24inches x 18inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">This 5th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Plumeneria alba', 'artworks/plumeria_alba.jpg', 'Dimension: 24inches x 18inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This is 6th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/plumeria_alba.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_03.png'" 
+                   alt="Plumeneria alba" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Plumeneria alba</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24inches x 18inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">This is 6th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Snapdragon', 'artworks/snapdragon.jpg', 'Dimension: 24inches x 18inches | Medium: acrylic on canvas | Year of Completion: 2024', 'Used as 3rd entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/snapdragon.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_04.png'" 
+                   alt="Snapdragon" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Snapdragon</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24inches x 18inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">Used as 3rd entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Purple Hibiscus', 'artworks/purple_hibiscus.jpg', 'Dimension: 19inches x 9 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 7th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/purple_hibiscus.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_05.png'" 
+                   alt="Purple Hibiscus" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Purple Hibiscus</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 19inches x 9 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 7th entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Pansy', 'artworks/pansy.jpg', 'Dimension: 12inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The entry no 8 for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/pansy.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_06.png'" 
+                   alt="Pansy" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Pansy</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 12inches x 12 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The entry no 8 for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Variegated Pineapple Lily', 'artworks/pineapple_lily.jpg', 'Dimension: 24inches x 18inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This is final entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/pineapple_lily.jpg" 
+                   onerror="this.src='./assets/deck_slides/floral_07.png'" 
+                   alt="Variegated Pineapple Lily" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">Title: Variegated Pineapple Lily</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24inches x 18inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">This is final entry for the Floral Series for self made remake “Fields of Love by Kokia”, ending theme of Brain Powerd.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARTWORKS: MINA NG HINAS (2026) -->
+    <section class="artworks-container" style="border-top: 1px solid var(--border); padding-top: 5rem;">
+      <h2 class="section-headline">MINA NG HINAS (2026)</h2>
+
+      <div class="quiet-exhibit-list">
+        <!-- Mina 1 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: “ANG JAM”', 'artworks/ang_jam.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14 INCHES x 14 INCHES | YEAR COMPLETED: 2026', 'THIS IS A PART OF THE SECOND “MINA NG HINAS”. THE ARTIST USED THE BRAND OF MERLS\' TO ILLUSTRATE HER APPRECIATE OF NATIVE DELICACY.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/ang_jam.jpg" 
+                   onerror="this.src='./assets/deck_slides/mina_01.png'" 
+                   alt="ANG JAM" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">TITLE: “ANG JAM”</h3>
+            <div class="exhibit-meta-list">
+              <p>MEDIUM: ACRYLIC ON CANVAS</p>
+              <p>SIZE: 14 INCHES x 14 INCHES</p>
+              <p>YEAR COMPLETED: 2026</p>
+            </div>
+            <p class="exhibit-note">THIS IS A PART OF THE SECOND “MINA NG HINAS”. THE ARTIST USED THE BRAND OF MERLS' TO ILLUSTRATE HER APPRECIATE OF NATIVE DELICACY.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- Mina 2 -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: “KATUTUBONG PAGHABI”', 'artworks/katutubong_paghabi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 24INCHES X 24INCHES | YEAR OF COMPLETED: 2026', 'THIS IS PART OF THE SCEOND “MINA NG HINAS”. THIS IS HER ILLUSTRATION OF “MANGYAN” TEXTILE AND BASKETRY THROUGH THE USE OF THE PATTERNS AND COLORS OF THE TEXTILE AND BASKET MAKING.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/katutubong_paghabi.jpg" 
+                   onerror="this.src='./assets/deck_slides/mina_02.png'" 
+                   alt="KATUTUBONG PAGHABI" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">TITLE: “KATUTUBONG PAGHABI”</h3>
+            <div class="exhibit-meta-list">
+              <p>MEDIUM: ACRYLIC ON CANVAS</p>
+              <p>SIZE: 24INCHES X 24INCHES</p>
+              <p>YEAR OF COMPLETED: 2026</p>
+            </div>
+            <p class="exhibit-note">THIS IS PART OF THE SCEOND “MINA NG HINAS”. THIS IS HER ILLUSTRATION OF “MANGYAN” TEXTILE AND BASKETRY THROUGH THE USE OF THE PATTERNS AND COLORS OF THE TEXTILE AND BASKET MAKING.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- Mina 3 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: “INFINITE WATERFALLS”', 'artworks/infinite_waterfalls.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 16 INCHES X 20INCHES | YEAR COMPLETED: 2026', 'THIS IS PART OF THE SECOND “MINA NG HINAS”. THIS IS AN ILLUSTRATION FOR IN INFINITY FALLS THAT CAN BE FOUND IN BACO, ORIENTAL MINDORO. THE ARTIST USED THIS FROM A PHOTO THAT SHE TOOK AS ONE OF HER FAVOURITE SITE OF THE WATERFALLS.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/infinite_waterfalls.jpg" 
+                   onerror="this.src='./assets/deck_slides/mina_03.png'" 
+                   alt="INFINITE WATERFALLS" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">TITLE: “INFINITE WATERFALLS”</h3>
+            <div class="exhibit-meta-list">
+              <p>MEDIUM: ACRYLIC ON CANVAS</p>
+              <p>SIZE: 16 INCHES X 20INCHES</p>
+              <p>YEAR COMPLETED: 2026</p>
+            </div>
+            <p class="exhibit-note">THIS IS PART OF THE SECOND “MINA NG HINAS”. THIS IS AN ILLUSTRATION FOR IN INFINITY FALLS THAT CAN BE FOUND IN BACO, ORIENTAL MINDORO. THE ARTIST USED THIS FROM A PHOTO THAT SHE TOOK AS ONE OF HER FAVOURITE SITE OF THE WATERFALLS.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+
+        <!-- Mina 4 -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: “DILAW NA KALACHUCHI”', 'artworks/dilaw_na_kalachuchi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14INCHES X 14INCHES | YEAR COMPLETED: 2026', 'THIS IS A PART OF “MINA NG HINAS”. THIS IS AN ILLUSTRATION OF “FRANGIPANI” OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALLERA.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/artworks/dilaw_na_kalachuchi.jpg" 
+                   onerror="this.src='./assets/deck_slides/mina_04.png'" 
+                   alt="DILAW NA KALACHUCHI" loading="lazy">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <h3 class="exhibit-title">TITLE: “DILAW NA KALACHUCHI”</h3>
+            <div class="exhibit-meta-list">
+              <p>MEDIUM: ACRYLIC ON CANVAS</p>
+              <p>SIZE: 14INCHES X 14INCHES</p>
+              <p>YEAR COMPLETED: 2026</p>
+            </div>
+            <p class="exhibit-note">THIS IS A PART OF “MINA NG HINAS”. THIS IS AN ILLUSTRATION OF “FRANGIPANI” OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALLERA.</p>
+            <p class="exhibit-status">not yet sold</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ART VIDEOS -->
+    <section class="video-section" id="art-videos">
+      <div class="video-block">
+        <div class="video-holder">
+          <video controls poster="./assets/video_poster.jpg" preload="none">
+            <source src="./assets/presentation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.5rem;">ART VIDEOS</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem;">A presentation of my old paintings</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACTS -->
+  <footer class="quiet-footer" id="contacts">
+    <div class="contacts-panel">
+      <h2>CONTACTS</h2>
+      <p class="contact-item">Email: <a href="mailto:karla.gonzales22@gmail.com">karla.gonzales22@gmail.com</a></p>
+      <p class="contact-item">Mobile:;09189471247</p>
+      <p class="contact-item">Home Address: Ilaya, Calapan City</p>
+    </div>
+
+    <div class="quiet-copyright">
+      <span>M_Karla_Art</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="quiet-modal" id="quietModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content-card">
+      <button class="quiet-close" id="quietCloseBtn" aria-label="Close dialog">Close &times;</button>
+      
+      <div class="modal-artwork-box">
+        <img id="quietModalImg" src="" alt="Artwork">
+      </div>
+      
+      <div class="modal-info-box">
+        <h3 class="modal-title-text" id="quietModalTitle"></h3>
+        <p class="modal-spec-text" id="quietModalSpec"></p>
+        <p class="modal-note-text" id="quietModalNote"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const quietModal = document.getElementById('quietModal');
+    const quietCloseBtn = document.getElementById('quietCloseBtn');
+    const quietModalImg = document.getElementById('quietModalImg');
+    const quietModalTitle = document.getElementById('quietModalTitle');
+    const quietModalSpec = document.getElementById('quietModalSpec');
+    const quietModalNote = document.getElementById('quietModalNote');
+
+    function openQuietModal(title, imgSrc, specs, note) {
+      quietModalTitle.textContent = title;
+      quietModalImg.src = './assets/' + imgSrc;
+      quietModalSpec.textContent = specs;
+      quietModalNote.textContent = note;
+
+      quietModal.classList.add('active');
+      quietModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      quietCloseBtn.focus();
+    }
+
+    function closeQuietModal() {
+      quietModal.classList.remove('active');
+      quietModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    quietCloseBtn.addEventListener('click', closeQuietModal);
+
+    quietModal.addEventListener('click', (e) => {
+      if (e.target === quietModal) closeQuietModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && quietModal.classList.contains('active')) {
+        closeQuietModal();
+      }
+    });
+  </script>
+</body>
+</html>
