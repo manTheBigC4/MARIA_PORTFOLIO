@@ -766,13 +766,13 @@
         </div>
 
         <!-- CUSTOMIZE BUTTON (SHADCN SHEET TRIGGER) -->
-        <button class="shadcn-btn-outline" onclick="toggleCustomizeSheet()" id="btnCustomize" title="Customize theme, accent color, and view options">
+        <button class="shadcn-btn-outline" onclick="toggleCustomizeSheet()" id="btnCustomize" title="Customize appearance">
           <svg viewBox="0 0 24 24"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M1 14h6"/><path d="M9 8h6"/><path d="M17 16h6"/></svg>
           <span>Customize</span>
         </button>
 
         <!-- OPEN DIRECT TAB -->
-        <a href="01-gallery-editorial.html" target="_blank" class="shadcn-btn-outline" id="btnOpenDirect" title="Open prototype in a new tab">
+        <a href="01-gallery-editorial.html" target="_blank" class="shadcn-btn-outline" id="btnOpenDirect" title="Open in new tab">
           <span>Open Tab</span>
           <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
@@ -784,20 +784,20 @@
       <div class="preview-frame-wrap device-desktop" id="frameWrap">
         <div class="loader-overlay" id="loaderOverlay">
           <div class="spinner"></div>
-          <span>Loading Prototype...</span>
+          <span>Loading...</span>
         </div>
-        <iframe id="demoIframe" src="01-gallery-editorial.html" title="Portfolio Prototype Frame"></iframe>
+        <iframe id="demoIframe" src="01-gallery-editorial.html" title="Portfolio Preview Frame"></iframe>
       </div>
     </main>
 
     <!-- TOAST NOTIFICATION -->
     <div class="toast-notification" id="toastNotification">
       <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-      <span id="toastMsg">Config settings exported to JSON!</span>
+      <span id="toastMsg">Settings saved</span>
     </div>
 
     <!-- ========================================================
-         SHADCN <Sheet> DRAWER: ADVANCED PROTOTYPE CUSTOMIZER
+         DRAWER: CUSTOMIZE
          ======================================================== -->
     <div class="sheet-backdrop" id="sheetBackdrop" onclick="toggleCustomizeSheet(false)"></div>
     <aside class="sheet-panel" id="sheetPanel" role="dialog" aria-labelledby="sheetTitle" aria-modal="true">
@@ -805,11 +805,10 @@
         <div>
           <div class="sheet-title" id="sheetTitle">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M1 14h6"/><path d="M9 8h6"/><path d="M17 16h6"/></svg>
-            <span>Customize Prototype</span>
+            <span>Customize</span>
           </div>
-          <p class="sheet-description">Real-time theme, accent palette, and layout engine across all 5 templates.</p>
         </div>
-        <button class="sheet-close-btn" onclick="toggleCustomizeSheet(false)" aria-label="Close customizer">
+        <button class="sheet-close-btn" onclick="toggleCustomizeSheet(false)" aria-label="Close">
           <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
@@ -819,16 +818,16 @@
         <div class="sheet-section">
           <div class="sheet-section-header">
             <span class="sheet-label">Accent Color</span>
-            <span class="sheet-sublabel" id="activeColorLabel">Coral (Artist Original)</span>
+            <span class="sheet-sublabel" id="activeColorLabel">Coral</span>
           </div>
           <div class="swatch-grid">
-            <button class="swatch-btn active" style="background: #df4a56;" data-color="#df4a56" data-name="Coral (Artist Original)" onclick="setAccent('#df4a56', 'Coral (Artist Original)')" title="Coral (Artist Original)">
+            <button class="swatch-btn active" style="background: #df4a56;" data-color="#df4a56" data-name="Coral" onclick="setAccent('#df4a56', 'Coral')" title="Coral">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
             <button class="swatch-btn" style="background: #f43f5e;" data-color="#f43f5e" data-name="Rose" onclick="setAccent('#f43f5e', 'Rose')" title="Rose">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
-            <button class="swatch-btn" style="background: #d4af37;" data-color="#d4af37" data-name="Gallery Gold" onclick="setAccent('#d4af37', 'Gallery Gold')" title="Gallery Gold">
+            <button class="swatch-btn" style="background: #d4af37;" data-color="#d4af37" data-name="Gold" onclick="setAccent('#d4af37', 'Gold')" title="Gold">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
             <button class="swatch-btn" style="background: #10b981;" data-color="#10b981" data-name="Emerald" onclick="setAccent('#10b981', 'Emerald')" title="Emerald">
@@ -837,129 +836,129 @@
             <button class="swatch-btn" style="background: #8b5cf6;" data-color="#8b5cf6" data-name="Violet" onclick="setAccent('#8b5cf6', 'Violet')" title="Violet">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
-            <button class="swatch-btn" style="background: #0284c7;" data-color="#0284c7" data-name="Ocean" onclick="setAccent('#0284c7', 'Ocean')" title="Ocean Blue">
+            <button class="swatch-btn" style="background: #0284c7;" data-color="#0284c7" data-name="Ocean" onclick="setAccent('#0284c7', 'Ocean')" title="Ocean">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
             <button class="swatch-btn" style="background: #27272a;" data-color="#27272a" data-name="Charcoal" onclick="setAccent('#27272a', 'Charcoal')" title="Charcoal">
               <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
-            <button class="swatch-btn" style="background: #ffffff; border: 1px solid #3f3f46;" data-color="#ffffff" data-name="Pure White" onclick="setAccent('#ffffff', 'Pure White')" title="Pure White">
+            <button class="swatch-btn" style="background: #ffffff; border: 1px solid #3f3f46;" data-color="#ffffff" data-name="White" onclick="setAccent('#ffffff', 'White')" title="White">
               <svg viewBox="0 0 24 24" style="stroke: #09090b;"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </button>
           </div>
           <!-- Custom Color Picker -->
           <div class="custom-color-row">
             <input type="color" class="custom-color-picker" id="customColorPicker" value="#df4a56">
-            <input type="text" class="custom-color-input" id="customColorHex" value="#df4a56" placeholder="Custom Hex (#000000)" onchange="handleCustomColorText(this.value)">
+            <input type="text" class="custom-color-input" id="customColorHex" value="#df4a56" placeholder="#000000" onchange="handleCustomColorText(this.value)">
           </div>
         </div>
 
         <!-- SECTION 2: TEMPLATE CANVAS MOOD -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Canvas Mood</span>
-            <span class="sheet-sublabel" id="activeMoodLabel">Template Default</span>
+            <span class="sheet-label">Theme</span>
+            <span class="sheet-sublabel" id="activeMoodLabel">Default</span>
           </div>
           <div class="option-grid grid-4">
-            <button class="option-btn active" id="theme-original" onclick="setThemeMode('original', 'Template Default')">Default</button>
-            <button class="option-btn" id="theme-dark" onclick="setThemeMode('dark', 'Dark Obsidian')">Dark</button>
-            <button class="option-btn" id="theme-light" onclick="setThemeMode('light', 'Light Paper')">Light</button>
-            <button class="option-btn" id="theme-parchment" onclick="setThemeMode('parchment', 'Parchment')">Warm</button>
+            <button class="option-btn active" id="theme-original" onclick="setThemeMode('original', 'Default')">Default</button>
+            <button class="option-btn" id="theme-dark" onclick="setThemeMode('dark', 'Dark')">Dark</button>
+            <button class="option-btn" id="theme-light" onclick="setThemeMode('light', 'Light')">Light</button>
+            <button class="option-btn" id="theme-parchment" onclick="setThemeMode('parchment', 'Warm')">Warm</button>
           </div>
         </div>
 
         <!-- SECTION 3: TYPOGRAPHY PAIRING -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Typography Style</span>
-            <span class="sheet-sublabel" id="activeFontLabel">Curated</span>
+            <span class="sheet-label">Typography</span>
+            <span class="sheet-sublabel" id="activeFontLabel">Default</span>
           </div>
           <div class="option-grid grid-4">
-            <button class="option-btn active" id="font-original" onclick="setFontFeel('original', 'Curated')">Curated</button>
-            <button class="option-btn" id="font-sans" onclick="setFontFeel('sans', 'Modern Sans')">Sans</button>
-            <button class="option-btn" id="font-serif" onclick="setFontFeel('serif', 'Editorial Serif')">Serif</button>
-            <button class="option-btn" id="font-mono" onclick="setFontFeel('mono', 'Clean Mono')">Mono</button>
+            <button class="option-btn active" id="font-original" onclick="setFontFeel('original', 'Default')">Default</button>
+            <button class="option-btn" id="font-sans" onclick="setFontFeel('sans', 'Sans-serif')">Sans</button>
+            <button class="option-btn" id="font-serif" onclick="setFontFeel('serif', 'Serif')">Serif</button>
+            <button class="option-btn" id="font-mono" onclick="setFontFeel('mono', 'Monospace')">Mono</button>
           </div>
         </div>
 
         <!-- SECTION 4: ARTWORK HOVER FX -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Artwork Hover FX</span>
-            <span class="sheet-sublabel" id="activeHoverLabel">Original</span>
+            <span class="sheet-label">Hover Effect</span>
+            <span class="sheet-sublabel" id="activeHoverLabel">Default</span>
           </div>
           <div class="option-grid grid-4">
-            <button class="option-btn active" id="hover-original" onclick="setHoverEffect('original', 'Original')">Original</button>
-            <button class="option-btn" id="hover-zoom" onclick="setHoverEffect('zoom', 'Zoom Scale')">Zoom</button>
-            <button class="option-btn" id="hover-bloom" onclick="setHoverEffect('bloom', 'B&W to Color')">B&W Bloom</button>
-            <button class="option-btn" id="hover-lift" onclick="setHoverEffect('lift', 'Elevation Lift')">Lift</button>
+            <button class="option-btn active" id="hover-original" onclick="setHoverEffect('original', 'Default')">Default</button>
+            <button class="option-btn" id="hover-zoom" onclick="setHoverEffect('zoom', 'Zoom')">Zoom</button>
+            <button class="option-btn" id="hover-bloom" onclick="setHoverEffect('bloom', 'Grayscale to Color')">Bloom</button>
+            <button class="option-btn" id="hover-lift" onclick="setHoverEffect('lift', 'Lift')">Lift</button>
           </div>
         </div>
 
         <!-- SECTION 5: SHADOW & LIGHTING -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Artwork Lighting</span>
-            <span class="sheet-sublabel" id="activeShadowLabel">Original</span>
+            <span class="sheet-label">Card Shadow</span>
+            <span class="sheet-sublabel" id="activeShadowLabel">Default</span>
           </div>
           <div class="option-grid grid-4">
-            <button class="option-btn active" id="shadow-original" onclick="setShadowDepth('original', 'Original')">Original</button>
-            <button class="option-btn" id="shadow-flat" onclick="setShadowDepth('flat', 'Flat Minimal')">Flat</button>
-            <button class="option-btn" id="shadow-studio" onclick="setShadowDepth('studio', 'Soft Studio')">Studio</button>
-            <button class="option-btn" id="shadow-dramatic" onclick="setShadowDepth('dramatic', 'Dramatic')">Dramatic</button>
+            <button class="option-btn active" id="shadow-original" onclick="setShadowDepth('original', 'Default')">Default</button>
+            <button class="option-btn" id="shadow-flat" onclick="setShadowDepth('flat', 'None')">None</button>
+            <button class="option-btn" id="shadow-studio" onclick="setShadowDepth('studio', 'Soft')">Soft</button>
+            <button class="option-btn" id="shadow-dramatic" onclick="setShadowDepth('dramatic', 'Deep')">Deep</button>
           </div>
         </div>
 
         <!-- SECTION 6: CARD CORNER GEOMETRY -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Card Geometry</span>
-            <span class="sheet-sublabel" id="activeRadiusLabel">Original</span>
+            <span class="sheet-label">Corner Radius</span>
+            <span class="sheet-sublabel" id="activeRadiusLabel">Default</span>
           </div>
           <div class="option-grid grid-4">
-            <button class="option-btn active" id="radius-original" onclick="setRadius('original', 'Original')">Original</button>
-            <button class="option-btn" id="radius-sharp" onclick="setRadius('sharp', 'Sharp 0px')">Sharp 0px</button>
-            <button class="option-btn" id="radius-soft" onclick="setRadius('soft', 'Soft 14px')">Soft 14px</button>
-            <button class="option-btn" id="radius-capsule" onclick="setRadius('capsule', 'Capsule 24px')">Pill 24px</button>
+            <button class="option-btn active" id="radius-original" onclick="setRadius('original', 'Default')">Default</button>
+            <button class="option-btn" id="radius-sharp" onclick="setRadius('sharp', '0px')">0px</button>
+            <button class="option-btn" id="radius-soft" onclick="setRadius('soft', '14px')">14px</button>
+            <button class="option-btn" id="radius-capsule" onclick="setRadius('capsule', '24px')">24px</button>
           </div>
         </div>
 
         <!-- SECTION 7: GALLERY GRID DENSITY -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Grid Spacing</span>
-            <span class="sheet-sublabel" id="activeSpacingLabel">Original</span>
+            <span class="sheet-label">Grid Gap</span>
+            <span class="sheet-sublabel" id="activeSpacingLabel">Default</span>
           </div>
           <div class="option-grid">
-            <button class="option-btn active" id="spacing-original" onclick="setGridSpacing('original', 'Original')">Original</button>
+            <button class="option-btn active" id="spacing-original" onclick="setGridSpacing('original', 'Default')">Default</button>
             <button class="option-btn" id="spacing-compact" onclick="setGridSpacing('compact', 'Compact')">Compact</button>
-            <button class="option-btn" id="spacing-spacious" onclick="setGridSpacing('spacious', 'Spacious')">Spacious</button>
+            <button class="option-btn" id="spacing-spacious" onclick="setGridSpacing('spacious', 'Wide')">Wide</button>
           </div>
         </div>
 
         <!-- SECTION 8: VIEWPORT SCALE -->
         <div class="sheet-section">
           <div class="sheet-section-header">
-            <span class="sheet-label">Preview Scale</span>
-            <span class="sheet-sublabel" id="activeScaleLabel">100% Fit</span>
+            <span class="sheet-label">Zoom</span>
+            <span class="sheet-sublabel" id="activeScaleLabel">100%</span>
           </div>
           <div class="option-grid">
-            <button class="option-btn active" id="scale-100" onclick="setScale(1, '100% Fit')">100%</button>
-            <button class="option-btn" id="scale-90" onclick="setScale(0.9, '90% Compact')">90%</button>
-            <button class="option-btn" id="scale-80" onclick="setScale(0.8, '80% Overview')">80%</button>
+            <button class="option-btn active" id="scale-100" onclick="setScale(1, '100%')">100%</button>
+            <button class="option-btn" id="scale-90" onclick="setScale(0.9, '90%')">90%</button>
+            <button class="option-btn" id="scale-80" onclick="setScale(0.8, '80%')">80%</button>
           </div>
         </div>
       </div>
 
-      <!-- SHEET FOOTER WITH EXPORT JSON ACTION -->
+      <!-- SHEET FOOTER -->
       <div class="sheet-footer">
         <button class="sheet-reset-btn" onclick="resetDefaults()">Reset</button>
         <div class="sheet-btn-group">
-          <button class="sheet-export-btn" onclick="exportConfigJSON()" title="Export current settings as JSON file and copy to clipboard">
+          <button class="sheet-export-btn" onclick="exportConfigJSON()" title="Export settings as JSON">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span>Export JSON</span>
           </button>
-          <button class="shadcn-btn-outline" style="height: 36px; padding: 0 14px;" onclick="toggleCustomizeSheet(false)">Done</button>
+          <button class="shadcn-btn-outline" style="height: 36px; padding: 0 14px;" onclick="toggleCustomizeSheet(false)">Close</button>
         </div>
       </div>
     </aside>
@@ -984,7 +983,7 @@
     // ========================================================
     const defaultSettings = {
       accent:      '#df4a56',
-      accentName:  'Coral (Artist Original)',
+      accentName:  'Coral',
       themeMode:   'original',
       fontFeel:    'original',
       hoverEffect: 'original',
@@ -992,7 +991,7 @@
       radius:      'original',
       gridSpacing: 'original',
       scale:       1,
-      scaleLabel:  '100% Fit'
+      scaleLabel:  '100%'
     };
 
     let currentSettings = { ...defaultSettings };
@@ -1456,10 +1455,10 @@
       // Copy to clipboard
       if (navigator.clipboard) {
         navigator.clipboard.writeText(jsonString)
-          .then(() => showToast('Config exported to JSON & copied to clipboard!'))
-          .catch(() => showToast('Config exported as JSON file!'));
+          .then(() => showToast('Config copied to clipboard'))
+          .catch(() => showToast('Config exported'));
       } else {
-        showToast('Config exported as JSON file!');
+        showToast('Config exported');
       }
     }
 
@@ -1472,7 +1471,7 @@
       clearTimeout(toastTimer);
       toastMsg.textContent = message;
       toastNotification.classList.add('show');
-      toastTimer = setTimeout(() => toastNotification.classList.remove('show'), 3200);
+      toastTimer = setTimeout(() => toastNotification.classList.remove('show'), 2400);
     }
 
     // ========================================================
@@ -1485,16 +1484,16 @@
       currentSettings = { ...defaultSettings };
 
       setAccent(defaultSettings.accent, defaultSettings.accentName, true);
-      setThemeMode('original', 'Template Default', true);
-      setFontFeel('original', 'Curated', true);
-      setHoverEffect('original', 'Original', true);
-      setShadowDepth('original', 'Original', true);
-      setRadius('original', 'Original', true);
-      setGridSpacing('original', 'Original', true);
-      setScale(1, '100% Fit');
+      setThemeMode('original', 'Default', true);
+      setFontFeel('original', 'Default', true);
+      setHoverEffect('original', 'Default', true);
+      setShadowDepth('original', 'Default', true);
+      setRadius('original', 'Default', true);
+      setGridSpacing('original', 'Default', true);
+      setScale(1, '100%');
 
       applyCustomizationsToIframe();
-      showToast('Reset all settings to defaults');
+      showToast('Settings reset to default');
     }
 
     // ========================================================
