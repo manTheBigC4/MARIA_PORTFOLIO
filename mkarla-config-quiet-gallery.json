@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "project": "MKarla Art Portfolio Showcase",
+    "artist": "Maria Karla L. Gonzales",
+    "exportDate": "2026-09-24T04:43:29.100Z",
+    "version": "2.1.0"
+  },
+  "activePrototype": {
+    "index": 2,
+    "id": "02-quiet-gallery.html",
+    "name": "Quiet Gallery"
+  },
+  "customizations": {
+    "accentColor": "#df4a56",
+    "accentLabel": "Coral",
+    "canvasMood": "original",
+    "typography": "serif",
+    "hoverEffect": "original",
+    "lightingShadow": "studio",
+    "cardGeometry": "soft",
+    "gridSpacing": "original",
+    "previewScale": 1
+  },
+  "cssTokens": {
+    "--coral": "#df4a56",
+    "--accent": "#df4a56",
+    "--theme-mode": "original",
+    "--font-feel": "serif",
+    "--radius": "14px"
+  }
+}
