@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M. Karla Art Gallery - Maria Karla L. Gonzales</title>
-  <meta name="description" content="The art portfolio of Maria Karla L. Gonzales. Featuring beautiful acrylic floral series and native Mangyan-inspired paintings.">
-  <meta property="og:title" content="M. Karla Art Gallery">
-  <meta property="og:description" content="The art portfolio of Maria Karla L. Gonzales. Featuring beautiful acrylic floral series and native paintings.">
+  <meta name="description" content="The art portfolio of Maria Karla L. Gonzales. Featuring the complete 15-piece acrylic Floral Series, Mina ng Hinas, Ortigas Art Festival exhibitions, and botanical landscapes.">
+  <meta property="og:title" content="M. Karla Art Gallery - Maria Karla L. Gonzales">
+  <meta property="og:description" content="Official art portfolio featuring the complete authenticated floral series, regional exhibitions, and botanical landscapes.">
   <meta property="og:image" content="./assets/hero_work.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* DESIGN DIRECTION 02: QUIET GALLERY / MUSEUM / COLLECTION EXPERIENCE */
+    /* DESIGN DIRECTION: QUIET GALLERY / MUSEUM / COLLECTION EXPERIENCE */
     :root {
       --bg: #f9f8f5;
       --bg-card: #ffffff;
@@ -25,12 +25,14 @@
       --border: #e6e2da;
       --border-delicate: rgba(28, 27, 26, 0.08);
       --accent-coral: #df4a56;
+      --accent-gold: #c59b27;
+      --accent-green: #2e6945;
       
       --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
       --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
       
       --container: 1200px;
-      --transition-calm: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      --transition-calm: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     *, *::before, *::after {
@@ -68,81 +70,97 @@
 
     /* HEADER */
     .gallery-header {
-      padding: 2.5rem 2rem 1.75rem;
+      padding: 2rem 2rem 1.5rem;
       max-width: var(--container);
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       border-bottom: 1px solid var(--border-delicate);
+      position: sticky;
+      top: 0;
+      background: rgba(249, 248, 245, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
     }
 
     .gallery-wordmark {
       font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
+      font-size: 1.65rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
       color: var(--accent-coral);
     }
 
     .gallery-nav {
       display: flex;
-      gap: 2.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
+      gap: 1.8rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      flex-wrap: wrap;
     }
 
     .gallery-nav a {
       color: var(--text-muted);
       position: relative;
       padding: 0.25rem 0;
+      font-weight: 400;
     }
 
     .gallery-nav a:hover,
     .gallery-nav a.active {
-      color: var(--text-main);
+      color: var(--accent-coral);
     }
 
     /* HERO */
     .quiet-hero {
       max-width: 900px;
-      margin: 5rem auto 4rem;
+      margin: 4.5rem auto 3.5rem;
       padding: 0 2rem;
       text-align: center;
     }
 
     .quiet-welcome {
       font-family: var(--font-serif);
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-size: clamp(2.4rem, 5vw, 4rem);
       font-weight: 300;
       color: var(--text-main);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
     }
 
     .quiet-artist-name {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
 
     .quiet-hero-artwork {
       background: var(--bg-card);
-      padding: 2rem;
+      padding: 1.75rem;
       border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06);
       display: inline-block;
       max-width: 520px;
       width: 100%;
       cursor: pointer;
+      transition: var(--transition-calm);
+    }
+
+    .quiet-hero-artwork:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18), 0 2px 5px rgba(0,0,0,0.08);
     }
 
     .quiet-hero-artwork img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: contain;
+      border-radius: 8px;
     }
 
     /* ABOUT ME SECTION */
@@ -151,36 +169,108 @@
       margin: 6rem auto;
       padding: 0 2rem;
       display: grid;
-      grid-template-columns: 360px 1fr;
+      grid-template-columns: 340px 1fr;
       gap: 4.5rem;
       align-items: center;
     }
 
     .bio-portrait-frame {
       background: #fff;
-      padding: 1.5rem 1.5rem 2rem;
+      padding: 1.25rem 1.25rem 1.75rem;
       border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12);
     }
 
     .bio-portrait-frame img {
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
+      border-radius: 8px;
     }
 
     .bio-text-side h2 {
       font-family: var(--font-serif);
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
     }
 
     .bio-text-side p {
       color: var(--text-muted);
       font-size: 1rem;
       line-height: 1.85;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* CERTIFICATE BANNER */
+    .certificate-card {
+      background: linear-gradient(135deg, #ffffff 0%, #faf8f2 100%);
+      border: 1px solid #dfd8c7;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin: 0 auto 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .cert-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .cert-seal {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #faf4e4;
+      border: 2px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .cert-text h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .cert-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--text-main);
+      color: #fff;
+      padding: 0.85rem 1.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: var(--transition-calm);
+    }
+
+    .cert-action-btn:hover {
+      background: var(--accent-coral);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(223, 74, 86, 0.35);
     }
 
     /* ARTWORKS SECTION */
@@ -192,29 +282,42 @@
 
     .section-headline {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 400;
       border-bottom: 1px solid var(--border);
       padding-bottom: 1rem;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
       color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .section-headline .section-count {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
     }
 
     .quiet-exhibit-list {
       display: flex;
       flex-direction: column;
-      gap: 6rem;
+      gap: 5.5rem;
     }
 
     .exhibit-unit {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
       gap: 4.5rem;
       align-items: center;
     }
 
     .exhibit-unit.reversed {
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.1fr;
     }
 
     .exhibit-unit.reversed .exhibit-canvas-holder {
@@ -225,46 +328,62 @@
       order: 1;
     }
 
-            .exhibit-canvas-holder {
+    .exhibit-canvas-holder {
       background: var(--bg-card);
       padding: 1.25rem;
       border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06);
       cursor: pointer;
       display: flex;
       justify-content: center;
       justify-self: center;
       align-self: center;
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       transition: var(--transition-calm);
     }
 
     .exhibit-canvas-holder:hover {
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18), 0 2px 5px rgba(0,0,0,0.08);
       border-color: #d8d4cc;
     }
 
-        .exhibit-img-wrap {
+    .exhibit-img-wrap {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-                        .exhibit-img-wrap img {
+    .exhibit-img-wrap img {
       width: 100%;
       height: auto;
-      max-height: 550px;
+      max-height: 520px;
       object-fit: contain;
       border-radius: 8px;
-      image-rendering: -webkit-optimize-contrast;
-      filter: contrast(1.02) saturate(1.05);
+      filter: contrast(1.02) saturate(1.04);
+      transition: transform 0.4s ease;
+    }
+
+    .exhibit-canvas-holder:hover .exhibit-img-wrap img {
+      transform: scale(1.015);
+    }
+
+    .exhibit-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent-coral);
+      margin-bottom: 0.6rem;
     }
 
     .exhibit-title {
       font-family: var(--font-serif);
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 400;
       color: var(--text-main);
       margin-bottom: 1rem;
@@ -275,21 +394,65 @@
       font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.8;
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .exhibit-meta-list p {
+      margin-bottom: 0.2rem;
     }
 
     .exhibit-note {
       font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.7;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
-    .exhibit-status {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #3b7a57;
+    .cert-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      color: var(--accent-gold);
+      background: #faf6ea;
+      border: 1px solid #ebe1c6;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    /* SPOTLIGHT EXHIBITION CARD */
+    .spotlight-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .spotlight-art-wrap {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    }
+
+    .spotlight-art-wrap img {
+      max-height: 560px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: var(--transition-calm);
+    }
+
+    .spotlight-art-wrap:hover img {
+      transform: scale(1.02);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.16);
     }
 
     /* ART VIDEOS */
@@ -299,20 +462,27 @@
       padding: 0 2rem;
     }
 
-    .video-block {
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .video-card {
       background: #fff;
       border: 1px solid var(--border);
-      padding: 2.5rem;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: center;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
     }
 
     .video-holder {
       background: #000;
       aspect-ratio: 16 / 9;
       overflow: hidden;
+      position: relative;
     }
 
     .video-holder video {
@@ -322,22 +492,40 @@
       display: block;
     }
 
+    .video-info {
+      padding: 1.8rem;
+    }
+
+    .video-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .video-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     /* CONTACTS */
     .quiet-footer {
       border-top: 1px solid var(--border);
       padding: 5rem 2rem 4rem;
       max-width: var(--container);
-      margin: 4rem auto 0;
+      margin: 5rem auto 0;
     }
 
     .contacts-panel {
-      max-width: 600px;
-      margin-bottom: 4rem;
+      max-width: 650px;
+      margin-bottom: 3.5rem;
     }
 
     .contacts-panel h2 {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
     }
@@ -357,8 +545,11 @@
       border-top: 1px solid var(--border-delicate);
       display: flex;
       justify-content: space-between;
-      font-size: 0.8rem;
+      align-items: center;
+      font-size: 0.85rem;
       color: var(--text-light);
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     /* MODAL */
@@ -368,15 +559,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(249, 248, 245, 0.97);
-      backdrop-filter: blur(8px);
+      background: rgba(249, 248, 245, 0.98);
+      backdrop-filter: blur(12px);
       z-index: 3000;
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 2.5rem;
+      padding: 2rem;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.35s ease;
     }
 
     .quiet-modal.active {
@@ -387,7 +578,7 @@
     .modal-content-card {
       max-width: 900px;
       width: 100%;
-      max-height: 90vh;
+      max-height: 92vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -395,42 +586,45 @@
     }
 
     .modal-artwork-box {
-      max-height: 60vh;
+      max-height: 62vh;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #fff;
       padding: 1.5rem;
       border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
     }
 
     .modal-artwork-box img {
-      max-height: 55vh;
+      max-height: 57vh;
       width: auto;
       object-fit: contain;
+      border-radius: 8px;
     }
 
     .modal-info-box {
       margin-top: 1.5rem;
       text-align: center;
-      max-width: 600px;
+      max-width: 650px;
     }
 
     .modal-title-text {
       font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 400;
+      font-size: 1.9rem;
+      font-weight: 500;
       margin-bottom: 0.35rem;
     }
 
     .modal-spec-text {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
 
     .modal-note-text {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
@@ -442,8 +636,8 @@
       background: none;
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--text-muted);
       cursor: pointer;
@@ -451,13 +645,66 @@
     }
 
     .quiet-close:hover {
-      color: var(--text-main);
+      color: var(--accent-coral);
     }
 
-    @media (max-width: 850px) {
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--accent-coral);
+      color: #fff;
+      width: 3.3rem;
+      height: 3.3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 14px rgba(223, 74, 86, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(223, 74, 86, 0.6);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+      display: inline-flex;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-coral);
+    }
+
+    @media (max-width: 900px) {
       .gallery-header {
         flex-direction: column;
-        gap: 1.25rem;
+        gap: 1.2rem;
+        padding: 1.5rem 1rem;
+      }
+      .gallery-nav {
+        justify-content: center;
+        gap: 1rem 1.4rem;
       }
       .quiet-about-section {
         grid-template-columns: 1fr;
@@ -474,195 +721,23 @@
       }
       .exhibit-unit.reversed .exhibit-canvas-holder { order: 1; }
       .exhibit-unit.reversed .exhibit-curation { order: 2; }
-      .video-block {
+      .spotlight-card {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2rem;
+      }
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+      .certificate-card {
+        flex-direction: column;
+        align-items: flex-start;
       }
       .quiet-copyright {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
       }
-    }
-      /* BACK TO TOP & FORM */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background: var(--accent-coral);
-      color: #fff;
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 4px 12px rgba(223, 74, 86, 0.4);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-    .back-to-top.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(223, 74, 86, 0.6);
-    }
-    .netlify-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .netlify-form input, .netlify-form textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      background: #fff;
-      color: var(--text-main);
-    }
-    .netlify-form input:focus, .netlify-form textarea:focus {
-      outline: none;
-      border-color: var(--accent-coral);
-    }
-    .netlify-form button {
-      background: var(--accent-coral);
-      color: #fff;
-      border: none;
-      padding: 1rem;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .netlify-form button:hover {
-      background: #c93d48;
-    }
-    .social-links {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    .social-links a {
-      color: var(--text-muted);
-      transition: color 0.3s ease;
-      display: inline-flex;
-    }
-    .social-links a:hover {
-      color: var(--accent-coral);
-    }
-  </style>
-  <style id="custom-theme-overrides">
-    /* Injected configurations from mkarla-config-quiet-gallery.json */
-    :root {
-      --accent-coral: #df4a56;
-    }
-
-    /* Studio Shadow and Soft Corners */
-    .quiet-hero-artwork,
-    .bio-portrait-frame,
-    .exhibit-canvas-holder,
-    .video-block,
-    .modal-content-card,
-    .modal-artwork-box {
-      border-radius: 14px;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.22), 0 1px 3px rgba(0,0,0,0.1) !important;
-    }
-
-    /* Hover effect for cards */
-    .quiet-hero-artwork:hover,
-    .exhibit-canvas-holder:hover {
-      box-shadow: 0 20px 45px rgba(0,0,0,0.25), 0 2px 5px rgba(0,0,0,0.12) !important;
-    }
-
-    /* Inner images rounding */
-    .quiet-hero-artwork img,
-    .bio-portrait-frame img,
-    .exhibit-canvas-holder img,
-    .modal-artwork-box img,
-    .video-holder {
-      border-radius: 8px;
-    }
-      /* BACK TO TOP & FORM */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background: var(--accent-coral);
-      color: #fff;
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 4px 12px rgba(223, 74, 86, 0.4);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-    .back-to-top.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(223, 74, 86, 0.6);
-    }
-    .netlify-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .netlify-form input, .netlify-form textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      background: #fff;
-      color: var(--text-main);
-    }
-    .netlify-form input:focus, .netlify-form textarea:focus {
-      outline: none;
-      border-color: var(--accent-coral);
-    }
-    .netlify-form button {
-      background: var(--accent-coral);
-      color: #fff;
-      border: none;
-      padding: 1rem;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .netlify-form button:hover {
-      background: #c93d48;
-    }
-    .social-links {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    .social-links a {
-      color: var(--text-muted);
-      transition: color 0.3s ease;
-      display: inline-flex;
-    }
-    .social-links a:hover {
-      color: var(--accent-coral);
     }
   </style>
 </head>
@@ -674,7 +749,10 @@
     <nav class="gallery-nav">
       <a href="#home">HOME</a>
       <a href="#about">ABOUT ME</a>
-      <a href="#floral-series">ARTWORKS</a>
+      <a href="#floral-series">FLORAL SERIES (15)</a>
+      <a href="#mina-ng-hinas">MINA NG HINAS</a>
+      <a href="#ortigas-exhibition">ORTIGAS EXHIBITION</a>
+      <a href="#botanical-landscapes">LANDSCAPES</a>
       <a href="#art-videos">ART VIDEOS</a>
       <a href="#contacts">CONTACTS</a>
     </nav>
@@ -686,17 +764,15 @@
       <h1 class="quiet-welcome">Hi! WELCOME</h1>
       <p class="quiet-artist-name">Maria Karla L. Gonzales</p>
       
-      <div class="quiet-hero-artwork" onclick="openQuietModal('Artwork', 'hero_work.jpg', '', '')">
-        <img src="./assets/hero_work.jpg" loading="eager" 
-             alt="Artwork" loading="eager">
+      <div class="quiet-hero-artwork" onclick="openQuietModal('Featured Work: Red Frangipani', 'gallery/floral/05_red_frangipani.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year: 2024', 'Entry from the Floral Series by Maria Karla L. Gonzales.')">
+        <img src="./assets/gallery/floral/05_red_frangipani.jpg" loading="eager" alt="Featured Work - Red Frangipani by Maria Karla L. Gonzales">
       </div>
     </section>
 
     <!-- ABOUT ME -->
     <section class="quiet-about-section" id="about">
       <div class="bio-portrait-frame">
-        <img src="./assets/portrait.jpg" 
-             alt="Maria Karla L. Gonzales">
+        <img src="./assets/portrait.jpg" alt="Maria Karla L. Gonzales">
       </div>
 
       <div class="bio-text-side">
@@ -710,77 +786,86 @@
       </div>
     </section>
 
-    <!-- ARTWORKS: MY FLORAL SERIES -->
+    <!-- ARTWORKS: COMPLETE FLORAL SERIES (15 WORKS) -->
     <section class="artworks-container" id="floral-series">
-      <h2 class="section-headline">MY FLORAL SERIES</h2>
+      <div class="section-headline">
+        <h2>MY FLORAL SERIES</h2>
+        <span class="section-count">15 Completed Works &bull; 2023–2024</span>
+      </div>
+
+      <!-- CERTIFICATE OF AUTHENTICITY CALLOUT -->
+      <div class="certificate-card">
+        <div class="cert-badge-wrap">
+          <div class="cert-seal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="cert-text">
+            <h3>Official Certificate of Authenticity</h3>
+            <p>Every piece in the 15-entry Floral Series is officially cataloged and verified under artist signature <strong>M_Karla_Art</strong>.</p>
+          </div>
+        </div>
+        <a href="./assets/docs/certificate_of_authenticity.pdf" target="_blank" class="cert-action-btn" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Certificate (PDF)
+        </a>
+      </div>
 
       <div class="quiet-exhibit-list">
-        <!-- 1 -->
+        <!-- 01: Canna Lily -->
         <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Crown of Thorns', 'artworks/crown_of_thorns.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 14th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Canna Lily', 'gallery/floral/01_canna_lily.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 1st entry for the Floral Series inspired by self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/crown_of_thorns.jpg" loading="lazy" 
-                   alt="Crown of Thorns - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/01_canna_lily.jpg" loading="lazy" alt="Canna Lily - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
-            <h3 class="exhibit-title">Title: Crown of Thorns</h3>
+            <span class="exhibit-tag">Floral Series &bull; Entry 01</span>
+            <h3 class="exhibit-title">Title: Canna Lily</h3>
             <div class="exhibit-meta-list">
               <p>Dimension: 24 inches x 18 inches</p>
               <p>Medium: acrylic on canvas</p>
               <p>Year of Completion: 2024</p>
             </div>
-            <p class="exhibit-note">The 14th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <p class="exhibit-note">The 1st entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
 
-        <!-- 2 -->
+        <!-- 02: Peregrina -->
         <article class="exhibit-unit reversed">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Red Frangipani', 'artworks/red_frangipani.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 5th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Peregrina', 'gallery/floral/02_peregrina.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 2nd entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/red_frangipani.jpg" loading="lazy" 
-                   alt="Red Frangipani - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/02_peregrina.jpg" loading="lazy" alt="Peregrina - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
-            <h3 class="exhibit-title">Title: Red Frangipani</h3>
+            <span class="exhibit-tag">Floral Series &bull; Entry 02</span>
+            <h3 class="exhibit-title">Title: Peregrina</h3>
             <div class="exhibit-meta-list">
-              <p>Dimension: 24 inches x 18 inches</p>
+              <p>Dimension: 12 inches x 12 inches</p>
               <p>Medium: acrylic on canvas</p>
               <p>Year of Completion: 2024</p>
             </div>
-            <p class="exhibit-note">The 5th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <p class="exhibit-note">The 2nd entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
 
-        <!-- 3 -->
+        <!-- 03: Snapdragon -->
         <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Plumeria alba', 'artworks/plumeria_alba.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This is the 6th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Snapdragon', 'gallery/floral/03_snapdragon.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 3rd entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/plumeria_alba.jpg" loading="lazy" 
-                   alt="Plumeria alba - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/03_snapdragon.jpg" loading="lazy" alt="Snapdragon - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
-            <h3 class="exhibit-title">Title: Plumeria alba</h3>
-            <div class="exhibit-meta-list">
-              <p>Dimension: 24 inches x 18 inches</p>
-              <p>Medium: acrylic on canvas</p>
-              <p>Year of Completion: 2024</p>
-            </div>
-            <p class="exhibit-note">This is the 6th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="exhibit-unit reversed">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Snapdragon', 'artworks/snapdragon.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 3rd entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
-            <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/snapdragon.jpg" loading="lazy" 
-                   alt="Snapdragon - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
-            </div>
-          </div>
-          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 03</span>
             <h3 class="exhibit-title">Title: Snapdragon</h3>
             <div class="exhibit-meta-list">
               <p>Dimension: 24 inches x 18 inches</p>
@@ -788,18 +873,79 @@
               <p>Year of Completion: 2024</p>
             </div>
             <p class="exhibit-note">The 3rd entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
 
-        <!-- 5 -->
-        <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Purple Hibiscus', 'artworks/purple_hibiscus.jpg', 'Dimension: 19 inches x 9 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 7th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+        <!-- 04: Mums -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Mums', 'gallery/floral/04_mums.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 4th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/purple_hibiscus.jpg" loading="lazy" 
-                   alt="Purple Hibiscus - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/04_mums.jpg" loading="lazy" alt="Mums - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 04</span>
+            <h3 class="exhibit-title">Title: Mums</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24 inches x 18 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 4th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 05: Red Frangipani -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Red Frangipani', 'gallery/floral/05_red_frangipani.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 5th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/05_red_frangipani.jpg" loading="lazy" alt="Red Frangipani - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 05</span>
+            <h3 class="exhibit-title">Title: Red Frangipani</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24 inches x 18 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 5th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 06: Plumeria alba -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Plumeria alba', 'gallery/floral/06_plumeria_alba.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 6th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/06_plumeria_alba.jpg" loading="lazy" alt="Plumeria alba - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 06</span>
+            <h3 class="exhibit-title">Title: Plumeria alba</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24 inches x 18 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">This is the 6th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 07: Purple Hibiscus -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Purple Hibiscus', 'gallery/floral/07_purple_hibiscus.jpg', 'Dimension: 19 inches x 9 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 7th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/07_purple_hibiscus.jpg" loading="lazy" alt="Purple Hibiscus - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 07</span>
             <h3 class="exhibit-title">Title: Purple Hibiscus</h3>
             <div class="exhibit-meta-list">
               <p>Dimension: 19 inches x 9 inches</p>
@@ -807,18 +953,19 @@
               <p>Year of Completion: 2024</p>
             </div>
             <p class="exhibit-note">The 7th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
 
-        <!-- 6 -->
+        <!-- 08: Pansy -->
         <article class="exhibit-unit reversed">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Pansy', 'artworks/pansy.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 8th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Pansy', 'gallery/floral/08_pansy.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 8th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/pansy.jpg" loading="lazy" 
-                   alt="Pansy - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/08_pansy.jpg" loading="lazy" alt="Pansy - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 08</span>
             <h3 class="exhibit-title">Title: Pansy</h3>
             <div class="exhibit-meta-list">
               <p>Dimension: 12 inches x 12 inches</p>
@@ -826,18 +973,139 @@
               <p>Year of Completion: 2024</p>
             </div>
             <p class="exhibit-note">The 8th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
 
-        <!-- 7 -->
+        <!-- 09: Alstroemeria Psittacina -->
         <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Variegated Pineapple Lily', 'artworks/pineapple_lily.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This is the final entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Alstroemeria Psittacina', 'gallery/floral/09_alstroemeria_psittacina.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 9th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/pineapple_lily.jpg" loading="lazy" 
-                   alt="Variegated Pineapple Lily - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/floral/09_alstroemeria_psittacina.jpg" loading="lazy" alt="Alstroemeria Psittacina - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 09</span>
+            <h3 class="exhibit-title">Title: Alstroemeria Psittacina</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 12 inches x 12 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 9th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 10: Desert Rose -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Desert Rose', 'gallery/floral/10_desert_rose.jpg', 'Dimension: 24 inches x 24 inches | Medium: acrylic on canvas | Year of Completion: 2023', 'The 10th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/10_desert_rose.jpg" loading="lazy" alt="Desert Rose - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 10</span>
+            <h3 class="exhibit-title">Title: Desert Rose</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24 inches x 24 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2023</p>
+            </div>
+            <p class="exhibit-note">The 10th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 11: Crossandra Infundibuliformis -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Crossandra Infundibuliformis', 'gallery/floral/11_crossandra_infundibuliformis.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 11th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/11_crossandra_infundibuliformis.jpg" loading="lazy" alt="Crossandra Infundibuliformis - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 11</span>
+            <h3 class="exhibit-title">Title: Crossandra Infundibuliformis</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 12 inches x 12 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 11th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 12: Turnera Ulmifolia -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Turnera Ulmifolia', 'gallery/floral/12_turnera_ulmifolia.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 12th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/12_turnera_ulmifolia.jpg" loading="lazy" alt="Turnera Ulmifolia - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 12</span>
+            <h3 class="exhibit-title">Title: Turnera Ulmifolia</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 12 inches x 12 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 12th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 13: Asystasia -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Asystasia', 'gallery/floral/13_asystasia.jpg', 'Dimension: 12 inches x 12 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 13th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/13_asystasia.jpg" loading="lazy" alt="Asystasia - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 13</span>
+            <h3 class="exhibit-title">Title: Asystasia</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 12 inches x 12 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 13th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 14: Crown of Thorns -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Crown of Thorns', 'gallery/floral/14_crown_of_thorns.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'The 14th entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/14_crown_of_thorns.jpg" loading="lazy" alt="Crown of Thorns - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Entry 14</span>
+            <h3 class="exhibit-title">Title: Crown of Thorns</h3>
+            <div class="exhibit-meta-list">
+              <p>Dimension: 24 inches x 18 inches</p>
+              <p>Medium: acrylic on canvas</p>
+              <p>Year of Completion: 2024</p>
+            </div>
+            <p class="exhibit-note">The 14th entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
+        </article>
+
+        <!-- 15: Variegated Pineapple Lily -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Variegated Pineapple Lily', 'gallery/floral/15_variegated_pineapple_lily.jpg', 'Dimension: 24 inches x 18 inches | Medium: acrylic on canvas | Year of Completion: 2024', 'This is the final entry for the Floral Series for self-made remake \'Fields of Love by Kokia\', ending theme of Brain Powerd.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/floral/15_variegated_pineapple_lily.jpg" loading="lazy" alt="Variegated Pineapple Lily - Acrylic Painting by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Floral Series &bull; Final Entry 15</span>
             <h3 class="exhibit-title">Title: Variegated Pineapple Lily</h3>
             <div class="exhibit-meta-list">
               <p>Dimension: 24 inches x 18 inches</p>
@@ -845,25 +1113,29 @@
               <p>Year of Completion: 2024</p>
             </div>
             <p class="exhibit-note">This is the final entry for the Floral Series for self-made remake "Fields of Love by Kokia", ending theme of Brain Powerd.</p>
-            </div>
+            <span class="cert-pill">&check; Authenticated Catalog Entry</span>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- ARTWORKS: MINA NG HINAS (2026) -->
-    <section class="artworks-container" style="border-top: 1px solid var(--border); padding-top: 5rem;">
-      <h2 class="section-headline">MINA NG HINAS (2026)</h2>
+    <section class="artworks-container" id="mina-ng-hinas" style="border-top: 1px solid var(--border); padding-top: 5rem;">
+      <div class="section-headline">
+        <h2>MINA NG HINAS (2026)</h2>
+        <span class="section-count">Regional Heritage &bull; Oriental Mindoro</span>
+      </div>
 
       <div class="quiet-exhibit-list">
         <!-- Mina 1 -->
         <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: "ANG JAM"', 'artworks/ang_jam.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14 inches x 14 inches | YEAR COMPLETED: 2026', 'THIS IS A PART OF THE SECOND "MINA NG HINAS". THE ARTIST USED THE BRAND OF MERLS\' TO ILLUSTRATE HER APPRECIATION OF NATIVE DELICACY.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: &quot;ANG JAM&quot;', 'gallery/mina/01_ang_jam.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14 inches x 14 inches | YEAR COMPLETED: 2026', 'THIS IS A PART OF THE SECOND &quot;MINA NG HINAS&quot;. THE ARTIST USED THE BRAND OF MERLS\' TO ILLUSTRATE HER APPRECIATION OF NATIVE DELICACY.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/ang_jam.jpg" loading="lazy" 
-                   alt="ANG JAM - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/mina/01_ang_jam.jpg" loading="lazy" alt="ANG JAM - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Mina ng Hinas 2026</span>
             <h3 class="exhibit-title">TITLE: "ANG JAM"</h3>
             <div class="exhibit-meta-list">
               <p>MEDIUM: ACRYLIC ON CANVAS</p>
@@ -871,18 +1143,18 @@
               <p>YEAR COMPLETED: 2026</p>
             </div>
             <p class="exhibit-note">THIS IS A PART OF THE SECOND "MINA NG HINAS". THE ARTIST USED THE BRAND OF MERLS' TO ILLUSTRATE HER APPRECIATION OF NATIVE DELICACY.</p>
-            </div>
+          </div>
         </article>
 
         <!-- Mina 2 -->
         <article class="exhibit-unit reversed">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: "KATUTUBONG PAGHABI"', 'artworks/katutubong_paghabi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 24 inches x 24 inches | YEAR OF COMPLETED: 2026', 'THIS IS PART OF THE SECOND "MINA NG HINAS". THIS IS HER ILLUSTRATION OF "MANGYAN" TEXTILE AND BASKETRY THROUGH THE USE OF THE PATTERNS AND COLORS OF THE TEXTILE AND BASKET MAKING.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: &quot;KATUTUBONG PAGHABI&quot;', 'gallery/mina/02_katutubong_paghabi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 24 inches x 24 inches | YEAR OF COMPLETED: 2026', 'THIS IS PART OF THE SECOND &quot;MINA NG HINAS&quot;. THIS IS HER ILLUSTRATION OF &quot;MANGYAN&quot; TEXTILE AND BASKETRY THROUGH THE USE OF THE PATTERNS AND COLORS OF THE TEXTILE AND BASKET MAKING.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/katutubong_paghabi.jpg" loading="lazy" 
-                   alt="KATUTUBONG PAGHABI - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/mina/02_katutubong_paghabi.jpg" loading="lazy" alt="KATUTUBONG PAGHABI - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Mina ng Hinas 2026</span>
             <h3 class="exhibit-title">TITLE: "KATUTUBONG PAGHABI"</h3>
             <div class="exhibit-meta-list">
               <p>MEDIUM: ACRYLIC ON CANVAS</p>
@@ -890,18 +1162,18 @@
               <p>YEAR OF COMPLETED: 2026</p>
             </div>
             <p class="exhibit-note">THIS IS PART OF THE SECOND "MINA NG HINAS". THIS IS HER ILLUSTRATION OF "MANGYAN" TEXTILE AND BASKETRY THROUGH THE USE OF THE PATTERNS AND COLORS OF THE TEXTILE AND BASKET MAKING.</p>
-            </div>
+          </div>
         </article>
 
         <!-- Mina 3 -->
         <article class="exhibit-unit">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: "INFINITE WATERFALLS"', 'artworks/infinite_waterfalls.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 16 inches x 20 inches | YEAR COMPLETED: 2026', 'THIS IS PART OF THE SECOND "MINA NG HINAS". THIS IS AN ILLUSTRATION OF INFINITY FALLS THAT CAN BE FOUND IN BACO, ORIENTAL MINDORO. THE ARTIST USED THIS FROM A PHOTO THAT SHE TOOK AS ONE OF HER FAVORITE VIEWS OF THE WATERFALLS.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: &quot;INFINITE WATERFALLS&quot;', 'gallery/mina/03_infinite_waterfalls.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 16 inches x 20 inches | YEAR COMPLETED: 2026', 'THIS IS PART OF THE SECOND &quot;MINA NG HINAS&quot;. THIS IS AN ILLUSTRATION OF INFINITY FALLS THAT CAN BE FOUND IN BACO, ORIENTAL MINDORO. THE ARTIST USED THIS FROM A PHOTO THAT SHE TOOK AS ONE OF HER FAVORITE VIEWS OF THE WATERFALLS.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/infinite_waterfalls.jpg" loading="lazy" 
-                   alt="INFINITE WATERFALLS - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/mina/03_infinite_waterfalls.jpg" loading="lazy" alt="INFINITE WATERFALLS - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Mina ng Hinas 2026</span>
             <h3 class="exhibit-title">TITLE: "INFINITE WATERFALLS"</h3>
             <div class="exhibit-meta-list">
               <p>MEDIUM: ACRYLIC ON CANVAS</p>
@@ -909,67 +1181,244 @@
               <p>YEAR COMPLETED: 2026</p>
             </div>
             <p class="exhibit-note">THIS IS PART OF THE SECOND "MINA NG HINAS". THIS IS AN ILLUSTRATION OF INFINITY FALLS THAT CAN BE FOUND IN BACO, ORIENTAL MINDORO. THE ARTIST USED THIS FROM A PHOTO THAT SHE TOOK AS ONE OF HER FAVORITE VIEWS OF THE WATERFALLS.</p>
-            </div>
+          </div>
         </article>
 
         <!-- Mina 4 -->
         <article class="exhibit-unit reversed">
-          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: "DILAW NA KALACHUCHI"', 'artworks/dilaw_na_kalachuchi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14 inches x 14 inches | YEAR COMPLETED: 2026', 'THIS IS A PART OF "MINA NG HINAS". THIS IS AN ILLUSTRATION OF "FRANGIPANI" OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALLERA.')">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: &quot;DILAW NA KALACHUCHI&quot;', 'gallery/mina/04_dilaw_na_kalachuchi.jpg', 'MEDIUM: ACRYLIC ON CANVAS | SIZE: 14 inches x 14 inches | YEAR COMPLETED: 2026', 'THIS IS A PART OF &quot;MINA NG HINAS&quot;. THIS IS AN ILLUSTRATION OF &quot;FRANGIPANI&quot; OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALERA.')">
             <div class="exhibit-img-wrap">
-              <img src="./assets/artworks/dilaw_na_kalachuchi.jpg" loading="lazy" 
-                   alt="DILAW NA KALACHUCHI - Acrylic Painting by Maria Karla L. Gonzales" loading="lazy">
+              <img src="./assets/gallery/mina/04_dilaw_na_kalachuchi.jpg" loading="lazy" alt="DILAW NA KALACHUCHI - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
           </div>
           <div class="exhibit-curation">
+            <span class="exhibit-tag">Mina ng Hinas 2026</span>
             <h3 class="exhibit-title">TITLE: "DILAW NA KALACHUCHI"</h3>
             <div class="exhibit-meta-list">
               <p>MEDIUM: ACRYLIC ON CANVAS</p>
               <p>SIZE: 14 inches x 14 inches</p>
               <p>YEAR COMPLETED: 2026</p>
             </div>
-            <p class="exhibit-note">THIS IS A PART OF "MINA NG HINAS". THIS IS AN ILLUSTRATION OF "FRANGIPANI" OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALLERA.</p>
+            <p class="exhibit-note">THIS IS A PART OF "MINA NG HINAS". THIS IS AN ILLUSTRATION OF "FRANGIPANI" OR LOCALLY KNOWN AS KALACHUCHI. THE ARTIST USED THIS FROM A PHOTO TAKEN FROM A BEACH RESORT IN PUERTO GALERA.</p>
+          </div>
+        </article>
+
+        <!-- Mina 5 -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('TITLE: &quot;MT. HALCON COFFEE&quot;', 'gallery/mina/05_mt_halcon_coffee.jpg', 'MEDIUM: ACRYLIC ON CANVAS | YEAR COMPLETED: 2026', 'THIS PAINTING CELEBRATES LOCAL ORIENTAL MINDORO COFFEE CULTURE AND THE BREATHTAKING VISTA OF MOUNT HALCON.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/mina/05_mt_halcon_coffee.jpg" loading="lazy" alt="MT. HALCON COFFEE - Acrylic Painting by Maria Karla L. Gonzales">
             </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Mina ng Hinas 2026</span>
+            <h3 class="exhibit-title">TITLE: "MT. HALCON COFFEE"</h3>
+            <div class="exhibit-meta-list">
+              <p>MEDIUM: ACRYLIC ON CANVAS</p>
+              <p>THEME: REGIONAL HERITAGE &amp; CULTURE</p>
+              <p>YEAR COMPLETED: 2026</p>
+            </div>
+            <p class="exhibit-note">THIS PAINTING CELEBRATES LOCAL ORIENTAL MINDORO COFFEE TRADITION, BLENDING STILL LIFE WITH THE MAJESTIC DISTANT SLOPES OF MOUNT HALCON.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- ART VIDEOS -->
-    <section class="video-section" id="art-videos">
-      <div class="video-block">
-        <div class="video-holder">
-          <video controls poster="./assets/video_poster.jpg" preload="none">
-            <source src="./assets/presentation.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    <!-- MAJOR EXHIBITIONS: ORTIGAS ART FESTIVAL -->
+    <section class="artworks-container" id="ortigas-exhibition" style="border-top: 1px solid var(--border); padding-top: 5rem;">
+      <div class="section-headline">
+        <h2>MAJOR EXHIBITIONS: ORTIGAS ART FESTIVAL</h2>
+        <span class="section-count">Curated Exhibition Entry</span>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="spotlight-art-wrap" onclick="openQuietModal('Title: Light tower Ilocos', 'gallery/exhibitions/light_tower_ilocos.jpg', 'Size: 18 inches x 24 inches | Medium: acrylic on canvas | Ortigas Art Festival', 'This is a dramatic scenery of Cape Bojeador Lighthouse in Burgos, Ilocos Norte, perched atop Vigia de Nagpartian Hill.')">
+          <img src="./assets/gallery/exhibitions/light_tower_ilocos.jpg" loading="lazy" alt="Light tower Ilocos - Cape Bojeador Lighthouse by Maria Karla L. Gonzales">
         </div>
         <div>
-          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.5rem;">ART VIDEOS</h2>
-          <p style="color: var(--text-muted); font-size: 1.1rem;">A presentation of my old paintings</p>
+          <span class="exhibit-tag">Ortigas Art Festival (OAF) Exhibition</span>
+          <h3 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 1rem;">Title: Light tower Ilocos</h3>
+          <div class="exhibit-meta-list">
+            <p><strong>Size:</strong> 18 inches x 24 inches</p>
+            <p><strong>Medium:</strong> Acrylic on canvas</p>
+            <p><strong>Subject:</strong> Cape Bojeador Lighthouse, Burgos, Ilocos Norte</p>
+            <p><strong>Exhibited:</strong> Ortigas Art Festival</p>
+          </div>
+          <p class="exhibit-note">
+            A commanding architectural and landscape scenery capturing Cape Bojeador Lighthouse, established during the Spanish colonial era. Built atop the scenic Vigia de Nagpartian Hill, the lighthouse continues to guide maritime travelers along the West Philippine Sea.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-subtle); border-radius: 8px; border-left: 3px solid var(--accent-coral);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.35rem;">Curatorial Honor: Aman Sinaya</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              In connection with her festival showcase, artist Maria Karla dedicated a special curatorial tribute to <em>Aman Sinaya</em> — the primordial Southern Tagalog deity of the ocean and protectress of fishermen, celebrating Filipino coastal life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTANICAL & LANDSCAPES -->
+    <section class="artworks-container" id="botanical-landscapes" style="border-top: 1px solid var(--border); padding-top: 5rem;">
+      <div class="section-headline">
+        <h2>BOTANICAL &amp; LANDSCAPE STUDIES</h2>
+        <span class="section-count">Nature &bull; Oils &amp; Acrylic Studies</span>
+      </div>
+
+      <div class="quiet-exhibit-list">
+        <!-- Botanical 1: Orchid -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Cattleya Orchid in Bloom', 'gallery/botanical_landscape/01_cattleya_orchid.jpg', 'Medium: Oil & acrylic on canvas | Signed: MKL \'13', 'A luminous close-up study of speckled Cattleya orchid petals against tropical foliage.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/botanical_landscape/01_cattleya_orchid.jpg" loading="lazy" alt="Cattleya Orchid in Bloom by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Botanical Study</span>
+            <h3 class="exhibit-title">Title: Cattleya Orchid</h3>
+            <div class="exhibit-meta-list">
+              <p>Medium: Oil &amp; acrylic on canvas</p>
+              <p>Signature: Signed MKL '13</p>
+            </div>
+            <p class="exhibit-note">A vibrant, luminous close-up study capturing the velvet textures and speckled crimson patterns of blossoming tropical Cattleya orchids.</p>
+          </div>
+        </article>
+
+        <!-- Botanical 2: Bougainvillea -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Bougainvillea Landscape', 'gallery/botanical_landscape/02_bougainvillea.jpg', 'Medium: Oil & acrylic on canvas | Signed: MKL \'13', 'Delicate lavender bougainvillea bracts set against a soft green pastoral garden landscape.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/botanical_landscape/02_bougainvillea.jpg" loading="lazy" alt="Bougainvillea Landscape by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Landscape &amp; Flora</span>
+            <h3 class="exhibit-title">Title: Bougainvillea Landscape</h3>
+            <div class="exhibit-meta-list">
+              <p>Medium: Oil &amp; acrylic on canvas</p>
+              <p>Signature: Signed MKL '13</p>
+            </div>
+            <p class="exhibit-note">Delicate lavender and white bougainvillea blossoms frame a serene misty green landscape, showcasing the artist's atmospheric depth.</p>
+          </div>
+        </article>
+
+        <!-- Botanical 3: Sampaguita -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Sampaguita & Morning Buds', 'gallery/botanical_landscape/03_sampaguita.jpg', 'Medium: Oil & acrylic on canvas', 'Star-shaped white petals of the Philippine national flower, radiant against a shadowed garden backdrop.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/botanical_landscape/03_sampaguita.jpg" loading="lazy" alt="Sampaguita and Morning Buds by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Botanical Study</span>
+            <h3 class="exhibit-title">Title: Sampaguita &amp; Morning Buds</h3>
+            <div class="exhibit-meta-list">
+              <p>Medium: Oil &amp; acrylic on canvas</p>
+              <p>Subject: Philippine Jasmine (Sampaguita)</p>
+            </div>
+            <p class="exhibit-note">The pure white, star-like petals of the national flower of the Philippines, depicted with subtle morning dew textures and layered foliage.</p>
+          </div>
+        </article>
+
+        <!-- Botanical 4: Desert Rose Blossom -->
+        <article class="exhibit-unit reversed">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Desert Rose Blossom', 'gallery/botanical_landscape/04_desert_rose_blossom.jpg', 'Medium: Oil & acrylic on canvas', 'Crimson and blush petals of Adenium against a warm rustic masonry wall.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/botanical_landscape/04_desert_rose_blossom.jpg" loading="lazy" alt="Desert Rose Blossom by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Botanical Study</span>
+            <h3 class="exhibit-title">Title: Desert Rose Blossom</h3>
+            <div class="exhibit-meta-list">
+              <p>Medium: Oil &amp; acrylic on canvas</p>
+              <p>Subject: Adenium Obesum</p>
+            </div>
+            <p class="exhibit-note">Vibrant magenta-edged petals unfurl gracefully against an earthy plaster background, balancing delicate floral fragility with bold sculpted branches.</p>
+          </div>
+        </article>
+
+        <!-- Botanical 5: Sunflower -->
+        <article class="exhibit-unit">
+          <div class="exhibit-canvas-holder" onclick="openQuietModal('Title: Sunflower Under Summer Sky', 'gallery/botanical_landscape/05_sunflower.jpg', 'Medium: Oil & acrylic on canvas | Signed: MKL', 'A triumphant golden sunflower reaching toward billowing white clouds and deep azure sky.')">
+            <div class="exhibit-img-wrap">
+              <img src="./assets/gallery/botanical_landscape/05_sunflower.jpg" loading="lazy" alt="Sunflower Under Summer Sky by Maria Karla L. Gonzales">
+            </div>
+          </div>
+          <div class="exhibit-curation">
+            <span class="exhibit-tag">Botanical Study</span>
+            <h3 class="exhibit-title">Title: Sunflower Under Summer Sky</h3>
+            <div class="exhibit-meta-list">
+              <p>Medium: Oil &amp; acrylic on canvas</p>
+              <p>Signature: Signed MKL</p>
+            </div>
+            <p class="exhibit-note">A golden bloom tilted skyward against rich azure blue and passing cumulus clouds, radiating natural warmth and vitality.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ART VIDEOS (2 PRESENTATIONS) -->
+    <section class="video-section" id="art-videos">
+      <div class="section-headline">
+        <h2>ART VIDEOS &amp; PRESENTATIONS</h2>
+        <span class="section-count">Multimedia Showcase</span>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card">
+          <div class="video-holder">
+            <video controls poster="./assets/video_poster.jpg" preload="none">
+              <source src="./assets/presentation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>Paintings Retrospective</h3>
+            <p>A curated presentation of earlier acrylic and oil paintings, documenting the creative evolution and thematic exploration of floral forms.</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+          <div class="video-holder">
+            <video controls poster="./assets/video_poster2.jpg" preload="none">
+              <source src="./assets/video_portfolio.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>Artist Video Portfolio</h3>
+            <p>Comprehensive video portfolio reel featuring exhibition highlights, canvas details, and showcase pieces by Maria Karla L. Gonzales.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-    <!-- CONTACTS -->
-    <footer class="quiet-footer" id="contacts">
+  <!-- CONTACTS -->
+  <footer class="quiet-footer" id="contacts">
     <div class="contacts-panel">
-      <h2>CONTACTS</h2>
+      <h2>CONTACTS &amp; INQUIRIES</h2>
       <p class="contact-item">Email: <a href="mailto:karla.gonzales22@gmail.com">karla.gonzales22@gmail.com</a></p>
       <p class="contact-item">Mobile: <a href="tel:09189471247">09189471247</a></p>
-      <p class="contact-item">Home Address: Ilaya, Calapan City</p>
+      <p class="contact-item">Home Studio: Ilaya, Calapan City, Oriental Mindoro</p>
       
       <div class="social-links">
-        <a href="#" aria-label="Instagram">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
-        <a href="#" aria-label="Facebook">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
         </a>
       </div>
     </div>
 
     <div class="quiet-copyright">
-      <span>M. Karla Art Gallery</span>
+      <span>&copy; M. Karla Art Gallery &bull; Maria Karla L. Gonzales. All rights reserved.</span>
+      <a href="./assets/docs/certificate_of_authenticity.pdf" target="_blank" style="color: var(--accent-coral); font-weight: 500;">
+        &bull; Official Certificate of Authenticity (PDF)
+      </a>
     </div>
   </footer>
 
@@ -989,6 +1438,11 @@
       </div>
     </div>
   </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
   <script>
     const quietModal = document.getElementById('quietModal');
@@ -1027,9 +1481,11 @@
         closeQuietModal();
       }
     });
-      const backToTop = document.getElementById('backToTop');
+
+    // Back to top scroll handler
+    const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) {
+      if (window.scrollY > 500) {
         backToTop.classList.add('visible');
       } else {
         backToTop.classList.remove('visible');
@@ -1039,26 +1495,5 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
-  <!-- BACK TO TOP BUTTON -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
