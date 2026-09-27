@@ -225,16 +225,18 @@
       order: 1;
     }
 
-        .exhibit-canvas-holder {
+            .exhibit-canvas-holder {
       background: var(--bg-card);
-      padding: 1rem;
+      padding: 1.25rem;
       border: 1px solid var(--border);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
       cursor: pointer;
-      display: inline-flex;
+      display: flex;
       justify-content: center;
       justify-self: center;
       align-self: center;
+      width: 100%;
+      max-width: 420px;
       transition: var(--transition-calm);
     }
 
@@ -243,18 +245,21 @@
       border-color: #d8d4cc;
     }
 
-    .exhibit-img-wrap {
-      max-height: 480px;
+        .exhibit-img-wrap {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-                    .exhibit-img-wrap img {
-      max-height: 460px;
-      width: auto;
+                        .exhibit-img-wrap img {
+      width: 100%;
+      height: auto;
+      max-height: 550px;
       object-fit: contain;
       border-radius: 8px;
+      image-rendering: -webkit-optimize-contrast;
+      filter: contrast(1.02) saturate(1.05);
     }
 
     .exhibit-title {
@@ -1051,6 +1056,7 @@
   </button>
 </body>
 </html>
+
 
 
 
