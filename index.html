@@ -84,6 +84,24 @@
       z-index: 1000;
     }
 
+    .gallery-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+
+    .gallery-logo-img {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+      transition: var(--transition-calm);
+    }
+
+    .gallery-brand:hover .gallery-logo-img {
+      transform: scale(1.04);
+    }
+
     .gallery-wordmark {
       font-family: var(--font-serif);
       font-size: 1.65rem;
@@ -745,7 +763,10 @@
 
   <!-- HEADER -->
   <header class="gallery-header">
-    <a href="#home" class="gallery-wordmark">M. Karla Art Gallery</a>
+    <a href="#home" class="gallery-brand">
+      <img src="./assets/logo_badge.png" alt="M_Karla_Art Logo" class="gallery-logo-img">
+      <span class="gallery-wordmark">M. Karla Art Gallery</span>
+    </a>
     <nav class="gallery-nav">
       <a href="#home">HOME</a>
       <a href="#about">ABOUT</a>
@@ -1413,7 +1434,10 @@
     </div>
 
     <div class="quiet-copyright">
-      <span>&copy; M. Karla Art Gallery &bull; Maria Karla L. Gonzales. All rights reserved.</span>
+      <div style="display: inline-flex; align-items: center; gap: 0.75rem;">
+        <img src="./assets/logo_badge.png" alt="M_Karla_Art Logo" style="height: 20px; width: auto; opacity: 0.85;">
+        <span>&copy; M. Karla Art Gallery &bull; Maria Karla L. Gonzales. All rights reserved.</span>
+      </div>
       <a href="./assets/docs/certificate_of_authenticity.pdf" target="_blank" style="color: var(--accent-coral); font-weight: 500;">
         &bull; Official Certificate of Authenticity (PDF)
       </a>
