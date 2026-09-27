@@ -67,6 +67,8 @@ Optimize-Image "assets/raw_op/Ortigas Art Frstival/20260703_042619.jpg" "assets/
 
 # 3. Ortigas & Major Exhibitions
 Optimize-Image "assets/raw_op/Ortigas Art Frstival/ilocos lighthouse.jpg" "assets/gallery/exhibitions/light_tower_ilocos.jpg" 1400 90
+Optimize-Image "assets/raw_op/Ortigas Art Frstival/extracted_aman/image2.jpeg" "assets/gallery/exhibitions/aman_sinaya.jpg" 1400 90
+
 
 # 4. Landscapes & Botanical
 Optimize-Image "assets/raw_photos/ls 20.jpg" "assets/gallery/botanical_landscape/01_cattleya_orchid.jpg" 1400 90
