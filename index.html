@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -248,14 +248,11 @@
       justify-content: center;
     }
 
-                .exhibit-img-wrap img {
-      height: 460px;
-      width: 100%;
+                    .exhibit-img-wrap img {
+      max-height: 460px;
+      width: auto;
       object-fit: contain;
       border-radius: 8px;
-      /* Subtle browser sharpening/contrast boost to help with upscaling */
-      image-rendering: -webkit-optimize-contrast;
-      filter: contrast(1.02) saturate(1.05);
     }
 
     .exhibit-title {
@@ -1052,6 +1049,7 @@
   </button>
 </body>
 </html>
+
 
 
 
