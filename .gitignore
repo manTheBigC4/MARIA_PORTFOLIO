@@ -1,0 +1,12 @@
+# Archives
+*.zip
+
+# Raw sources (uncompressed working materials)
+assets/raw_op/
+assets/raw_photos/
+assets/video_portfolio.mp4
+assets/certificate of authenticity.pdf
+assets/certificate_of_authenticity.pdf
+
+# Logs & temp
+*.log
