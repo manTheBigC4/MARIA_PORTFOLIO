@@ -736,22 +736,14 @@
       color: var(--accent-coral);
     }
 
-    @media (max-width: 900px) {
-      .gallery-header {
-        flex-direction: column;
-        gap: 1.2rem;
-        padding: 1.5rem 1rem;
-      }
-      .gallery-nav {
-        justify-content: center;
-        gap: 1rem 1.4rem;
-      }
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
       .quiet-about-section {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 3rem;
       }
       .bio-portrait-frame {
-        max-width: 300px;
+        max-width: 320px;
         margin: 0 auto;
       }
       .exhibit-unit,
@@ -764,19 +756,254 @@
       .spotlight-card {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-        padding: 2rem;
+        padding: 2.5rem;
       }
       .video-grid {
         grid-template-columns: 1fr;
       }
-      .certificate-card {
+    }
+
+    @media (max-width: 768px) {
+      .gallery-header {
+        padding: 0.85rem 1.25rem;
         flex-direction: column;
-        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      .gallery-brand {
+        gap: 0.6rem;
+      }
+      .gallery-logo-img {
+        height: 28px;
+      }
+      .gallery-wordmark {
+        font-size: 1.15rem;
+      }
+      .gallery-nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.65rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.15rem 0.25rem 0.35rem;
+      }
+      .gallery-nav::-webkit-scrollbar {
+        display: none;
+      }
+      .gallery-nav a {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        padding: 0.35rem 0.8rem;
+        background: rgba(28, 27, 26, 0.04);
+        border-radius: 20px;
+        flex-shrink: 0;
+      }
+      .gallery-nav a:hover,
+      .gallery-nav a.active {
+        background: var(--text-main);
+        color: var(--bg);
+      }
+      .quiet-hero {
+        margin: 3rem auto 2.5rem;
+        padding: 0 1.25rem;
+      }
+      .quiet-welcome {
+        font-size: clamp(2.2rem, 7vw, 3.2rem);
+      }
+      .quiet-artist-name {
+        margin-bottom: 2rem;
+      }
+      .quiet-hero-artwork {
+        padding: 1rem;
+        max-width: 100%;
+      }
+      .quiet-about-section {
+        margin: 4rem auto;
+        padding: 0 1.25rem;
+        gap: 2rem;
+      }
+      .artworks-container {
+        margin: 4rem auto;
+        padding: 0 1.25rem;
+      }
+      .section-headline {
+        margin-bottom: 2.5rem;
+        padding-bottom: 0.75rem;
+      }
+      .section-headline h2 {
+        font-size: 1.95rem;
+      }
+      .quiet-exhibit-list {
+        gap: 3.5rem;
+      }
+      .exhibit-unit,
+      .exhibit-unit.reversed {
+        gap: 1.75rem;
+      }
+      .exhibit-canvas-holder {
+        padding: 1rem;
+        max-width: 100%;
+      }
+      .exhibit-title {
+        font-size: 1.85rem;
+      }
+      .certificate-card {
+        padding: 1.75rem 1.25rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .cert-badge-wrap {
+        gap: 1.25rem;
+      }
+      .cert-action-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1.25rem;
+      }
+      .spotlight-card {
+        padding: 1.75rem 1.25rem;
+        gap: 2rem;
+      }
+      .video-section {
+        margin: 4rem auto;
+        padding: 0 1.25rem;
+      }
+      .video-info {
+        padding: 1.4rem 1.25rem;
+      }
+      .quiet-footer {
+        padding: 3.5rem 1.25rem 3rem;
+        margin: 3.5rem auto 0;
       }
       .quiet-copyright {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+      }
+      /* Responsive Lightbox Modal */
+      .quiet-modal {
+        padding: 1rem 0.75rem;
+      }
+      .modal-content-card {
+        max-height: 94vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.5rem 0.25rem 1.5rem;
+      }
+      .quiet-close {
+        position: sticky;
+        top: 0;
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+        background: rgba(249, 248, 245, 0.94);
+        backdrop-filter: blur(8px);
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        font-size: 0.78rem;
+        z-index: 10;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .modal-artwork-box {
+        max-height: 48vh;
+        padding: 0.85rem;
+        width: 100%;
+      }
+      .modal-artwork-box img {
+        max-height: 44vh;
+        width: auto;
+        max-width: 100%;
+      }
+      .modal-info-box {
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+      }
+      .modal-title-text {
+        font-size: 1.5rem;
+      }
+      .modal-spec-text {
+        font-size: 0.82rem;
+      }
+      .modal-note-text {
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+      .back-to-top {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 2.85rem;
+        height: 2.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-header {
+        padding: 0.75rem 1rem;
+      }
+      .gallery-wordmark {
+        font-size: 1.05rem;
+      }
+      .quiet-hero {
+        margin: 2.5rem auto 2rem;
+        padding: 0 1rem;
+      }
+      .quiet-welcome {
+        font-size: 2.1rem;
+      }
+      .quiet-artist-name {
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+      }
+      .quiet-hero-artwork {
+        padding: 0.75rem;
+      }
+      .quiet-about-section {
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+      .bio-portrait-frame {
+        max-width: 240px;
+        padding: 0.6rem;
+      }
+      .bio-text-side h2 {
+        font-size: 1.85rem;
+      }
+      .artworks-container {
+        margin: 3.5rem auto;
+        padding: 0 1rem;
+      }
+      .section-headline h2 {
+        font-size: 1.7rem;
+      }
+      .exhibit-canvas-holder {
+        padding: 0.75rem;
+      }
+      .exhibit-title {
+        font-size: 1.6rem;
+      }
+      .cert-seal {
+        width: 46px;
+        height: 46px;
+      }
+      .cert-seal svg {
+        width: 22px;
+        height: 22px;
+      }
+      .cert-text h3 {
+        font-size: 1.2rem;
+      }
+      .cert-text p {
+        font-size: 0.84rem;
+      }
+      .spotlight-card {
+        padding: 1.25rem 1rem;
+      }
+      .video-info h3 {
+        font-size: 1.35rem;
       }
     }
   </style>
