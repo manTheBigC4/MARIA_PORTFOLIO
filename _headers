@@ -29,9 +29,10 @@
 /assets/docs/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Video media - 30 days cache with revalidation
+# Video media - 30 days cache with range request streaming
 /assets/*.mp4
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Accept-Ranges: bytes
 
 # Security and Privacy Headers
 /*
