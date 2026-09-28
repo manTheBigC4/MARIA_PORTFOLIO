@@ -582,20 +582,24 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(249, 248, 245, 0.98);
-      backdrop-filter: blur(12px);
+      background: rgba(249, 248, 245, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       z-index: 3000;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
       opacity: 0;
-      transition: opacity 0.35s ease;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.38s ease;
     }
 
     .quiet-modal.active {
-      display: flex;
       opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
 
     .modal-content-card {
@@ -606,6 +610,15 @@
       flex-direction: column;
       align-items: center;
       position: relative;
+      transform: scale(0.92) translateY(24px);
+      opacity: 0;
+      transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.32s ease;
+      will-change: transform, opacity;
+    }
+
+    .quiet-modal.active .modal-content-card {
+      transform: scale(1) translateY(0);
+      opacity: 1;
     }
 
     .modal-artwork-box {
@@ -617,7 +630,13 @@
       padding: 1.5rem;
       border: 1px solid var(--border);
       border-radius: 14px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(28, 27, 26, 0.04);
+      transform: scale(0.97);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+    }
+
+    .quiet-modal.active .modal-artwork-box {
+      transform: scale(1);
     }
 
     .modal-artwork-box img {
@@ -625,12 +644,21 @@
       width: auto;
       object-fit: contain;
       border-radius: 8px;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .modal-info-box {
       margin-top: 1.5rem;
       text-align: center;
       max-width: 650px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.35s ease 0.08s, transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+    }
+
+    .quiet-modal.active .modal-info-box {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .modal-title-text {
