@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artwork Not Found — 404 — M. Karla Art</title>
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9f8f5;
+      --text-main: #1c1b1a;
+      --text-muted: #6e6b66;
+      --text-light: #9c9891;
+      --border-delicate: rgba(28, 27, 26, 0.08);
+      --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+      --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-badge img {
+      height: 36px;
+      width: auto;
+    }
+
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .error-container {
+      max-width: 520px;
+      margin: 2rem auto;
+    }
+
+    .error-code {
+      font-family: var(--font-serif);
+      font-size: clamp(5rem, 15vw, 8rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .error-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .error-description {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .btn-return {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      background: var(--text-main);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .btn-return:hover {
+      background: #3a3937;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <a href="./" class="brand-badge">
+    <img src="./assets/logo_badge.png" alt="M_Karla_Art Logo">
+    <span class="brand-name">M. Karla Art</span>
+  </a>
+
+  <main class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Artwork Not Found</h1>
+    <p class="error-description">
+      The piece or page you are looking for may have been moved, renamed, or is currently not in this exhibition.
+    </p>
+    <a href="./" class="btn-return">Return to Gallery</a>
+  </main>
+
+  <footer class="footer-note">
+    &copy; 2026 Maria Karla L. Gonzales. All rights reserved.
+  </footer>
+</body>
+</html>
